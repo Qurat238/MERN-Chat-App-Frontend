@@ -1,0 +1,13 @@
+.chatsPage{
+    background-image: url(../../images/chat.avif);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.chatsSection{
+    display: flex;
+    gap: 1rem;
+}

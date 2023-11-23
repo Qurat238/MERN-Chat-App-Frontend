@@ -1,0 +1,248 @@
+.LoginSignupContainer{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-image: url(../../images/chat.avif);
+    background-size: cover;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+.LoginSignupBox{
+    background-color: black;
+    width: 27vw;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 0.3rem solid white;
+}
+.login_signup_toggle{
+    display: flex;
+    height: 6rem;
+}
+.login_signup_toggle p{
+    font-size: 2.5rem;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    transition: 0.5s linear;
+    margin-top: 1rem;
+}
+.login_signup_toggle p:hover{
+    color: tomato;
+}
+.LoginSignupBox div button{
+    background-color: tomato;
+    border: none;
+    height: 0.3rem;
+    width: 50%;
+    transition: 0.5s linear;
+}
+.loginForm,
+.signupForm{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 4rem;
+    transition: 0.5s linear;
+}
+.signupForm{
+    transform: translateY(-100%) translateX(-100rem);
+}
+.loginForm div,
+.signupForm div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.signupForm div:first-child{
+    margin-top: 4rem;
+}
+.loginForm div input,
+.signupForm div input{
+    font-size: 2rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0.1rem solid rgba(0,0,0,0.267);
+    outline: none;
+    border-radius: 0.4rem;
+    padding: 1.5rem 4rem;
+    padding-right: 1rem;
+    margin: 0.5rem;
+}
+.loginForm div svg,
+.signupForm div svg{
+    position: absolute;
+    transform: translateX(1rem);
+    font-size: 2rem;
+    color: tomato;
+}
+.loginForm a{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: rgba(0,0,0,0.651);
+    align-self: flex-end;
+    transition: 0.5s linear;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+.loginForm a:hover{
+    color: black;
+}
+#registerImage img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    background-color: white;
+}
+#registerImage input{
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin-left: 0.5rem;
+    border: 0.1rem solid white;
+}
+.loginBtn,
+.signupBtn{
+    border: none;
+    outline: none;
+    color: white;
+    background-color: tomato;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    padding: 1.3rem;
+    transition: 0.5s linear;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
+}
+.loginBtn:hover,
+.signupBtn:hover{
+    background-color: rgb(179,66,46);
+}
+.shiftToLeft{
+    transform: translateX(-100%);
+}
+.shiftToNeutral{
+    transform: translateX(0%);
+}
+.shiftToNeutralForm{
+    transform: translateX(0%) translateY(-100%);
+}
+.shiftToRight{
+    transform: translateX(100%);
+}
+
+@media (max-width:1650px) {
+    .LoginSignupBox{
+        width: 30vw;
+    }
+}
+
+@media (max-width:1500px) {
+    .LoginSignupBox{
+        width: 32vw;
+    }
+}
+@media (max-width:1350px) {
+    .LoginSignupBox{
+        width: 35vw;
+    }
+}
+
+@media (max-width:1200px) {
+    .LoginSignupBox{
+        width: 40vw;
+    }
+}
+@media (max-width:1000px) {
+    .LoginSignupBox{
+        width: 45vw;
+    }
+}
+@media (max-width:900px) {
+    .LoginSignupBox{
+        width: 50vw;
+    }
+}
+@media (max-width:800px) {
+    .LoginSignupBox{
+        width: 60vw;
+        height: 60vh;
+    }
+} 
+@media (max-width:770px) {
+    .LoginSignupBox{
+        width: 60vw;
+        height: 60vh;
+    }
+    .signupForm div:first-child{
+        margin-top: 7rem;
+    }
+    .loginForm a{
+        margin-top: 2rem;
+    }
+    .loginBtn,
+    .signupBtn{
+        margin-top: 3rem;
+    }
+    .loginForm div input,
+    .signupForm div input{
+        padding: 2rem 4rem;
+    }
+}
+@media (max-width:650px) {
+    .LoginSignupBox{
+        width: 70vw;
+    }
+}
+@media (max-width: 568px) {
+    .login_signup_toggle{
+        height: 8rem;
+    }
+    .login_signup_toggle p{
+        font-size: 3rem;
+    }
+    .signupForm div:first-child{
+        margin-top: 7rem;
+    }
+    .loginForm div input,
+    .signupForm div input{
+        font-size: 2.5rem;
+    }
+    .loginForm div svg,
+    .signupForm div svg{
+        font-size: 2.5rem;
+    }
+    .loginForm a{
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .loginBtn,
+    .signupBtn{
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+    .loginForm div input,
+    .signupForm div input{
+        padding: 2.5rem 4rem;
+    }
+}
+@media (max-width:440px) {
+    .LoginSignupBox{
+        height: 50vh;
+    }
+} 

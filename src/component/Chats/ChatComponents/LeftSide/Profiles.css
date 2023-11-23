@@ -1,0 +1,87 @@
+.profilesSection{
+    background-color: black;
+    height: 79vh;
+    margin: 2rem 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.profilesSection::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: black;
+}
+.profilesSection::-webkit-scrollbar-track {
+    background-color: black;
+}
+.profilesSection::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+.profilesSection .profile{
+    background-color: white;
+    margin-right: 1rem;
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 0.3rem solid black;
+    padding: 1rem;
+    cursor: pointer;
+}
+.profilesSection .profileSelected{
+    background-color: black;
+    margin-right: 1rem;
+    margin-bottom: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    border: 0.3rem solid white;
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
+}
+.profilesSection .profileSelected div{
+    display: flex;
+    align-items: center;
+}
+.profilesSection .profile div{
+    display: flex;
+    align-items: center;
+}
+.profilePic{
+    display: flex;
+    position: relative;
+}
+.profilePic img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+}
+.dot{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    background-color: green;
+    position: absolute;
+    top: 0.5rem;
+    left: 4.5rem;
+}
+.profileInfo{
+    width: 30rem;
+    height: 5rem;
+    margin-left: 2rem;
+}
+.profileInfo h1{
+    margin-bottom: 0.3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profileInfo div{
+    display: flex;
+    justify-content: space-between;
+}
+.profileInfo div p{
+    font-size: 1.6rem;
+}
+.tick{
+    margin-right: 1rem;
+}

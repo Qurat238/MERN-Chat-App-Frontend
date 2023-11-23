@@ -1,0 +1,140 @@
+.sidebarContainer{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebarContainer .search{
+    margin-left: 1rem;
+}
+.sidebarContainer .search button{
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+}
+.sidebarContainer .search button:hover {
+    color: tomato;
+}
+.sidebarContainer .search button svg{
+    font-size: 3rem;
+}
+.sidebarContainer .options{
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 1rem;
+}
+.sidebarContainer .options button{
+    background-color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.sidebarContainer .options button:hover{
+    color: tomato;
+}
+.sidebarContainer .options button svg{
+    font-size: 3rem;
+}
+#sidePanel{
+    width: 25vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -25vw;
+    background-color: white;
+    transition: left 0.3s;
+    z-index: 1;
+    overflow-y: scroll;
+}
+#sidePanel::-webkit-scrollbar {
+    width: 0.7rem;
+    background-color: white;
+}
+#sidePanel::-webkit-scrollbar-track {
+    background-color: white;
+}
+#sidePanel::-webkit-scrollbar-thumb {
+    background-color: tomato;
+}
+#overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    display: none;
+}
+#close{
+    padding: 0.5rem;
+    background-color: black;
+    color: tomato;
+}
+#close svg{
+    font-size: 3rem;
+}
+.searchSection{
+    display: flex;
+    padding: 1rem;
+    margin: 3rem 1rem;
+}
+#sidePanel div input {
+    padding: 1rem;
+    font-size: 2rem;
+    width: 20vw;
+    border: 0.3rem solid black;
+}
+
+#sidePanel div button {
+    padding: 0.5rem 1rem;
+    background-color: black;
+}
+
+#sidePanel div button svg {
+    font-size: 3rem;
+    color: tomato;
+}
+.swal2-popup {
+    font-size: 20px;
+}
+#profile{
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    top: 20rem;
+    left: 60rem;
+    width: 45rem;
+    height: 35rem;
+    display: none;
+    transition: all 0.5s;
+}
+#profile div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#profile div img{
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    object-fit: contain;
+}
+#profile div h1{
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+#profile div p{
+    font-size: 2.8rem;
+    margin-top: 2rem;
+}
+#overlay1{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}

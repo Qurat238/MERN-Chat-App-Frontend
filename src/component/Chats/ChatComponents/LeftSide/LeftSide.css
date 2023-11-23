@@ -1,0 +1,198 @@
+.leftSide{
+    width: 24vw;
+    background-color: black;
+    border: 0.3rem solid white;
+    height: 90vh;
+    margin-left: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.createGroup{
+    margin-bottom: 1rem;
+    background-color: white;
+}
+.createGroup > button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 16rem;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    background-color: white;
+    color: black;
+}
+#closeChat {
+    padding: 0.5rem;
+    background-color: black;
+    color: tomato;
+}
+#closeChat svg {
+    font-size: 3rem;
+}
+#createGroupChat {
+    background-color: white;
+    z-index: 1;
+    position: fixed;
+    top: 15rem;
+    left: 60rem;
+    width: 45rem;
+    height: auto;
+    min-height: 45rem;
+    display: none;
+    transition: all 0.5s;
+    padding-bottom: 5rem;
+}
+#createGroupChat > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#createGroupChat > div > h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+}
+.groupName{
+    margin: auto;
+}
+.userSearchSection {
+    display: flex;
+    margin: 2rem auto;
+}
+.groupName input{
+    padding: 1rem;
+    font-size: 2rem;
+    width: 20vw;
+    border: 0.3rem solid black;
+}
+.userSearchSection input{
+    padding: 1rem;
+    font-size: 2rem;
+    width: 16.5vw;
+    border: 0.3rem solid black;
+}
+.userSearchSection button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: black;
+}
+.userSearchSection button svg {
+    font-size: 3rem;
+    color: tomato;
+}
+#userSearchedResult{
+    overflow-y: scroll;
+    height: 19vh;
+    display: none;
+    margin-top: -2rem;
+    width: 20vw;
+    background-color: tomato;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+    position: fixed;
+    border: 0.3rem solid black;
+    border-top: none;
+}
+#userSearchedResult::-webkit-scrollbar {
+    width: 0.7rem;
+    background-color: tomato;
+}
+#userSearchedResult::-webkit-scrollbar-track {
+    background-color: tomato;
+}
+#userSearchedResult::-webkit-scrollbar-thumb {
+    background-color: black;
+    border: 0.1rem solid white;
+}
+.userSearched{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    border: 0.3rem solid black;
+    padding: 0.5rem;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+.userSearched img{
+    width: 4rem;
+    border-radius: 100%;
+    margin-right: 2rem;
+}
+.userSearched .userSearchedInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.userSearched .userSearchedInfo > h1{
+    margin-bottom: 0.1rem;
+    font-size: 1.5rem;
+}
+.userSearched .userSearchedInfo > p {
+    font-size: 1.3rem;
+}
+.userSelectedResult{
+    display: flex;
+    width: 20vw;
+    overflow-x: scroll;
+    justify-content: flex-start;
+}
+.userSelectedResult::-webkit-scrollbar {
+    height: 1rem;
+    background-color: white;
+}
+.userSelectedResult::-webkit-scrollbar-track {
+    background-color: white;
+}
+.userSelectedResult::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border: 0.1rem solid white;
+    border-radius: 0.5rem;
+}
+.userSelectedResult div{
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+.userSelectedResult div p{
+    display: flex;
+    align-items: center;
+    background-color: tomato;
+    padding: 0.8rem 1.3rem;
+    width:max-content;
+    margin-right: 1rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+.userSelectedResult div p button svg{
+    margin-left: 1rem;
+}
+.createGroupBtn{
+    width: 20vw;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.createGroupBtn:hover {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border: 0.3rem solid black;
+}
+#overlay2{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
