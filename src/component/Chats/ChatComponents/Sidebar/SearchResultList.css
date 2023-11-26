@@ -2,14 +2,17 @@
     background-color: white;
     display: flex;
     align-items: center;
-    border-radius: 1rem;
-    border: 0.3rem solid black;
+    /* border: 0.3rem solid black; */
     padding: 1rem;
     margin: 0 1rem;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+}
+.searchedUser:hover{
+    background-color: rgba(236, 236, 236, 1);
 }
 .searchedUser img {
-    width: 7rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 100%;
     margin-right: 2rem;
 }
@@ -23,9 +26,9 @@
 
 .searchedUser .searchedUserInfo h1 {
     margin-bottom: 0.3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .searchedUser .searchedUserInfo p {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }

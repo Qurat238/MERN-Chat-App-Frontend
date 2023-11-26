@@ -49,7 +49,7 @@ const Profiles = ({fetchAgain}) => {
                      <div>
                         <div className='profilePic'>
                            <img style={{backgroundColor:"white"}} src={!chat.isGroupChat ? getSenderImage(loggedUser, chat.users) : `${icon}`}/>
-                           <div className={chat.isGroupChat ? "not" : "dot"}></div>
+                           {/* <div className={chat.isGroupChat ? "not" : "dot"}></div> */}
                         </div>
                         <div key={chat._id} className='profileInfo'>
                            <h1>{!chat.isGroupChat ? getSenderName(loggedUser, chat.users) : chat.chatName}</h1>

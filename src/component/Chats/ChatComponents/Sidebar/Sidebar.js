@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./Sidebar.css";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import CloseIcon from "@mui/icons-material/Close";
@@ -25,9 +25,9 @@ const Sidebar = () => {
     const [loading, setLoading] = useState(false);
     const [loadingChat, setLoadingChat] = useState();
 
-    const NotificationHandler = (e) => {
-        navigate("/notifications");
-    }
+    // const NotificationHandler = (e) => {
+    //     navigate("/notifications");
+    // }
 
     const ProfileHandler = (e) => {
         let profile = document.getElementById('profile');
@@ -139,7 +139,7 @@ const Sidebar = () => {
             <div id='overlay'></div>
         </div>
         <div className='options'>
-            <button onClick={NotificationHandler}><NotificationsIcon/></button>
+            {/* <button onClick={NotificationHandler}><NotificationsIcon/></button> */}
             <button onClick={ProfileHandler}><PersonIcon/></button>
             <div id='overlay1'>
                 <div id='profile'>

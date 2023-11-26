@@ -170,7 +170,7 @@ const LeftSide = ({fetchAgain}) => {
                       ))
                       }
                     </div>
-                    <button onClick={submitHandler} className='createGroupBtn'>Create Group</button>
+                    <button onClick={submitHandler} className='createGroupBtn'>Create</button>
                     </div>
                 </div>
             </div>

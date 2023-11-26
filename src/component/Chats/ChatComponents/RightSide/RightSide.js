@@ -8,7 +8,6 @@ import Loader from "../../../layout/Loader/Loader.js";
 import axios from 'axios';
 import Swal from "sweetalert2";
 import icon from "../../../../images/icon.png";
-
 import io from "socket.io-client";
 const ENDPOINT = "http://localhost:4000";
 var socket, selectedChatCompare;
@@ -19,10 +18,10 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
   const [ loading, setLoading ] = useState(false);
   const [ newMessage, setNewMessage ] = useState('');
   const [ socketConnected, setSocketConnected ] = useState(false);
-  const [ typing, setTyping ] = useState(false);
-  const [ isTyping, setIsTyping ] = useState(false);
+  // const [ typing, setTyping ] = useState(false);
+  // const [ isTyping, setIsTyping ] = useState(false);
 
-  const { user, selectedChat, setSelectedChat } = ChatState();
+  const { user, selectedChat, setSelectedChat, notifications, setNotifications } = ChatState();
 
   const getSenderName = (loggedUser, users) => {
       return users[0]._id === loggedUser.user._id ? users[1].name : users[0].name;
@@ -107,35 +106,35 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
       
   }
 
-  const typingHandler = (e) => {
-    setNewMessage(e.target.value);
-
-    //Typing Indicator Logic
-    if(!socketConnected) return;
-    if(!typing){
-      setTyping(true);
-      socket.emit("typing",selectedChat._id);
-    }
-    var initialTime = new Date().getTime();
-    var timer = 3000;
-    setTimeout(() => {
-      var finalTime = new Date().getTime();
-      var timeDiff = finalTime - initialTime;
-      console.log(timeDiff)
-      if(timeDiff >= timer && typing){
-        socket.emit("stop typing", selectedChat._id);
-        setTyping(false);
-      }
-    },timer);
-  }
-
   useEffect(() => {
     socket = io(ENDPOINT);
     socket.emit("setup", user.user);
     socket.on("connection",() => setSocketConnected(true));
-    socket.on("typing", () => setIsTyping(true));
-    socket.on("stop typing", () => setIsTyping(false));
+    // socket.on("typing", () => setIsTyping(true));
+    // socket.on("stop typing", () => setIsTyping(false));
   },[])
+
+  // //Function to handle typing status
+  // const typingHandler = (e) => {
+  //   setNewMessage(e.target.value);
+  //   //Typing Indicator Logic
+  //   if(!socketConnected) return;
+  //   if(!typing){
+  //     setTyping(true);
+  //     socket.emit("typing",selectedChat._id);
+  //   }
+  //   var initialTime = new Date().getTime();
+  //   var timer = 3000;
+  //   setTimeout(() => {
+  //     var finalTime = new Date().getTime();
+  //     var timeDiff = finalTime - initialTime;
+  //     console.log(timeDiff)
+  //     if(timeDiff >= timer && typing){
+  //       socket.emit("stop typing", selectedChat._id);
+  //       setTyping(false);
+  //     }
+  //   },timer);
+  // }
 
   useEffect(() => {
     fetchMessages();
@@ -146,6 +145,10 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
     socket.on("message received", (newMessage) => {
       if(!selectedChatCompare || selectedChatCompare._id !== newMessage.chat._id){
         // Give notifications
+        // if(!notifications.includes(newMessage)){
+        //   setNotifications([newMessage, ...notifications]);
+        //   setFetchAgain(!fetchAgain);
+        // }
       } else {
         setMessages([...messages, newMessage]);
       }
@@ -191,7 +194,7 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
             <div className='chatHeader'>
               <div className='chatHeaderBox'>
               <img src={icon} alt='Group Icon'/>
-              <h1>{selectedChat.chatName.toUpperCase()}</h1>
+              <h1>{selectedChat.chatName}</h1>
               </div>
               <div>
                 <UpdateGroupChat
@@ -226,9 +229,9 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
                     )} 
                  </div>
               ) : (
-                <div className='groupIconsContainer'>
-                  <p className={m.sender._id === user.user._id ? "me" : "you"}>{m.content}</p>
-                </div>
+                  <div className='personalChat'>
+                    <p className={m.sender._id === user.user._id ? "me" : "you"}>{m.content}</p>
+                  </div>
               )}
             </div>
             ))}            
@@ -236,9 +239,9 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
         )}
       </div>
       <form className='write'>
-        {isTyping ? <div style={{backgroundColor:"aqua", zIndex:"1"}}>...Loading</div> : <></>}
-        <input id='messageInput' onChange={typingHandler} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{fontSize:"2rem", paddingLeft:"1rem"}}/>
-        <button onClick={sendMessage}>Send</button>
+        {/* <input id='messageInput' onChange={typingHandler} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{fontSize:"2rem", paddingLeft:"1rem"}}/> */}
+        <input id='messageInput' onChange={(e) => setNewMessage(e.target.value)} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{fontSize:"2rem", paddingLeft:"1rem"}}/>
+        <button onClick={sendMessage}></button>
       </form>
     </div>
     </div>

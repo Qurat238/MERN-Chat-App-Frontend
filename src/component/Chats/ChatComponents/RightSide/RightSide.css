@@ -33,6 +33,8 @@
 }
 .rightSide .userName .chatHeader .chatHeaderBox h1{
     height: 100%;
+    font-size: 2.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .rightSide .userName .chatHeader .chatHeaderBox img{
     height: 5rem;
@@ -48,7 +50,7 @@
     border: none;
 }
 .chatHeader > div > button:hover {
-    color: tomato;
+    color: #2A6A5A;
 }
 .chatHeader > div > button > svg{
     font-size: 4.5rem;
@@ -100,8 +102,8 @@
     display: none;
 }
 .rightSide .messages .logic{
-    height: 73vh;
-    background-color: black;
+    height: 74vh;
+    background-image: url(../../../../images/1.jpg);
     padding: 1rem;
     border: 0.3rem solid white;
     border-top: none;
@@ -126,10 +128,11 @@
     flex-direction: column;
 }
 .groupIcons img{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 100%;
     margin: 1rem;
+    border: 0.3rem solid white;
 }
 .groupIcons p{
     font-size: 2rem;
@@ -148,6 +151,24 @@
 .groupIcons .groupIconsBox{
     display: flex;
 }
+.personalChat{
+    display: flex;
+    flex-direction: column;
+}
+.personalChat p{
+    font-size: 2rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    width: fit-content;
+    border-radius: 1rem;
+}
+.personalChat .me{
+    align-self: flex-end;
+}
+.personalChat .you{
+    align-self: flex-start;
+}
 .rightSide .write{
     display: flex;
     align-items: center;
@@ -157,26 +178,31 @@
 .rightSide .write > input{
     height: 6vh;
     margin-left: 1rem;
-    width: 66vw;
-    border: 0.3rem solid black;
+    outline: none;
+    width: 70vw;
+    border: none;
     border-radius: 1rem 0 0 1rem;
 }
 .rightSide  .write > button{
-    height: 6vh;
-    width: 7vw;
-    border-radius: 0 1rem 1rem 0;
+    height: 5vh;
+    width: 3vw;
     border: none;
-    background-color: black;
-    color: white;
+    border-radius: 10%;
+    background-image: url(../../../../images/send.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
     font-size: 2rem;
+    color: white;
 }
 .noSelectedChatTextContainer{
     width: 74vw;
-    background-color: white;
+    background-image: url(../../../../images/1.jpg);
     height: 90vh;
     margin-right: 1rem;
     border-radius: 1rem;
     display: flex;
+    border: 0.3rem solid white;
 }
 .noSelectedChatTextContainer p{
     display: flex;
@@ -185,4 +211,5 @@
     font-size: 4.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
+    color: white;
 }
