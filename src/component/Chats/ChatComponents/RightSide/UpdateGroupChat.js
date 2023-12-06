@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./UpdateGroupChat.css";
 import SettingsIcon from "@mui/icons-material/Settings";
 import CloseIcon from "@mui/icons-material/Close";
+import EditIcon from "@mui/icons-material/Edit";
 import { ChatState } from '../../../../Context/ChatProvider';
 import SearchIcon from "@mui/icons-material/Search";
 import axios from 'axios';
@@ -210,7 +211,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
               </div>
               <div className='renameGroup'>
                 <input type='text' placeholder="Group Name" value={groupChatName} onChange={(e) => setGroupChatName(e.target.value)}/>
-                <button onClick={handleRename}>Edit</button>
+                <button onClick={handleRename}><EditIcon/></button>
               </div>
               <div className='userEditSection'>
                 <input type='search' placeholder='Add User To Group'  value={groupChatSearch} onChange={(e) => setGroupChatSearch(e.target.value)}/>
@@ -233,7 +234,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
                   )}
               </div>
               </div>
-              <button className='leaveGroupBtn' onClick={() => removeUserHandler(user.user)}>Leave Group</button>
+              <button className='leaveGroupBtn' onClick={() => removeUserHandler(user.user)}>Exit</button>
             </div>
         </div>
       </div>

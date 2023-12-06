@@ -91,7 +91,13 @@ const Sidebar = () => {
             setLoadingChat(false);
             let sidePanel = document.getElementById('sidePanel');
             let overlay = document.getElementById('overlay');
-            sidePanel.style.left='-25vw';
+            if(window.innerWidth < 360){
+                sidePanel.style.left='-100vw'
+            } else if(window.innerWidth < 768) {
+                sidePanel.style.left='-40vw';
+            } else{
+                sidePanel.style.left='-25vw'
+            }
             overlay.style.display = 'none';
         } catch (error) {
             Swal.fire({
@@ -107,7 +113,13 @@ const Sidebar = () => {
         let profile = document.getElementById('profile');
         let overlay = document.getElementById('overlay');
         let overlay1 = document.getElementById('overlay1');
-        sidePanel.style.left='-25vw';
+        if(window.innerWidth < 360){
+            sidePanel.style.left='-100vw';
+        } else if(window.innerWidth < 768){
+            sidePanel.style.left='-40vw';
+        } else {
+            sidePanel.style.left='-25vw';
+        }
         profile.style.display = 'none';
         overlay.style.display = 'none';
         overlay1.style.display = 'none';
@@ -146,7 +158,7 @@ const Sidebar = () => {
                 <button id='close' onClick={closeHandler}><CloseIcon/></button>
                 <div>
                     <h1>{user && user.user.name}</h1>
-                    <img src={user.user.avatar ? user.user.avatar.url : icon}/>
+                    <img src={user.user.avatar ? user.user.avatar.url : icon} alt='profile'/>
                     <p>{user && user.user.email}</p>
                 </div>
             </div>

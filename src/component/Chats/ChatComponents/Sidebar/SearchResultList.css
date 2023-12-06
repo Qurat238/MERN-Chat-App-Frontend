@@ -2,22 +2,24 @@
     background-color: white;
     display: flex;
     align-items: center;
-    /* border: 0.3rem solid black; */
     padding: 1rem;
     margin: 0 1rem;
-    /* margin-bottom: 1rem; */
 }
 .searchedUser:hover{
     background-color: rgba(236, 236, 236, 1);
 }
-.searchedUser img {
-    width: 6rem;
+.searchedUser .searchedUserPic{
+    width: 20%;
+    margin-right: 10%;
+}
+.searchedUser .searchedUserPic img {
+    width: 100%;
     height: 6rem;
     border-radius: 100%;
     margin-right: 2rem;
 }
 .searchedUser .searchedUserInfo {
-    width: 20rem;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,3 +34,104 @@
 .searchedUser .searchedUserInfo p {
     font-size: 1.5rem;
 }
+
+@media (max-width:1115px) {
+    .searchedUser .searchedUserPic{
+        width: 30%;
+        margin-right: 0;
+    }
+    .searchedUser .searchedUserInfo {
+        width: 65%;
+        margin-left: 5%;
+    }
+}
+@media (max-width:800px) {
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 1.8rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:768px) {
+    .searchedUser .searchedUserPic{
+        width: 20%;
+        margin-right: 10%;
+    }
+    .searchedUser .searchedUserInfo {
+        width: 70%;
+        margin-left: 0;
+    }
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 2.2rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 1.7rem;
+    }
+}
+@media (max-width:569px) {
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 2.5rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 2rem;
+    }
+}
+@media (max-width:368px) {
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 2.3rem;
+    }
+}
+@media (max-width:360px) {
+    .searchedUser .searchedUserPic{
+        margin-left: 5%;
+        width: 15%;
+        margin-right: 5%;
+    }
+    .searchedUser .searchedUserPic img {
+        height: 10rem;
+    }
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 3.2rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 2.7rem;
+    }
+}
+@media (max-width:260px) {
+    .searchedUser .searchedUserPic{
+        margin-left: 0;
+        width: 20%;
+        margin-right: 5%;
+    }
+}
+@media (max-width:200px) {
+    .searchedUser .searchedUserPic{
+        width: 25%;
+        margin-right: 5%;
+    }
+}
+/* @media (max-width:781px) {
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 1.6rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 1.1rem;
+    }
+} */
+
+/* @media (max-width:880px) {
+    
+}
+@media (max-width:810px) {
+    .searchedUser .searchedUserInfo h1 {
+        font-size: 1.6rem;
+    }
+    .searchedUser .searchedUserInfo p {
+        font-size: 1.1rem;
+    }
+} */

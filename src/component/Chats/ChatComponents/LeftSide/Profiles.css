@@ -1,7 +1,6 @@
 .profilesSection{
     background-color: white;
     height: 81vh;
-    /* margin: 2rem 1rem; */
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -17,12 +16,9 @@
 }
 .profilesSection .profile{
     background-color: white;
-    /* margin-bottom: 1.1rem; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border-radius: 1rem; */
-    /* border: 0.3rem solid black; */
     padding: 1rem;
     cursor: pointer;
 }
@@ -80,6 +76,6 @@
 .profileInfo div p{
     font-size: 1.6rem;
 }
-.tick{
+/* .tick{
     margin-right: 1rem;
-}
+} */

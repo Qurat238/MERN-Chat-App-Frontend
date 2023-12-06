@@ -4,18 +4,15 @@
     border: 0.3rem solid white;
     height: 90vh;
     margin-left: 1rem;
+    margin-top: 0.4rem;
     border-radius: 1rem;
     overflow: hidden;
 }
 .createGroup{
-    /* margin-bottom: 1rem; */
     background-color: white;
     border-bottom: 3px solid white;
 }
 .createGroup > button {
-    /* margin-top: 1rem;
-    margin-bottom: 1rem; */
-    /* margin-left: 16rem; */
     margin: 1rem 2rem;
     width: 90%;
     padding: 1rem;
@@ -23,7 +20,6 @@
     font-size: 1.8rem;
     border-radius: 10rem;
     background-color: #50897A;
-    /* border: 1px solid white; */
     color: white;
     outline: none;
 }
@@ -39,8 +35,8 @@
     background-color: #2A6A5A;
     z-index: 1;
     position: fixed;
-    top: 15rem;
-    left: 60rem;
+    top: 9rem;
+    left: 50rem;
     width: 45rem;
     height: auto;
     min-height: 45rem;
@@ -132,7 +128,6 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: white;
     display: flex;
     align-items: center;
-    /* border: 0.3rem solid black; */
     padding: 0.5rem;
     margin: 0 0.5rem;
 }
@@ -169,27 +164,28 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: white;
 }
 .userSelectedResult::-webkit-scrollbar-track {
-    background-color: #2A6A5A;
+    background-color: white;
 }
 .userSelectedResult::-webkit-scrollbar-thumb {
-    background-color: gray;
+    background-color: black;
     border: 0.1rem solid white;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 }
 .userSelectedResult div{
     display: flex;
     margin-bottom: 1rem;
-
 }
 .userSelectedResult div p{
     display: flex;
     align-items: center;
-    background-color: tomato;
+    background-color: black;
     padding: 0.8rem 1.3rem;
     width:max-content;
     margin-right: 1rem;
     border-radius: 2rem;
     font-size: 1.5rem;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .userSelectedResult div p button svg{
     margin-left: 1rem;
@@ -204,12 +200,6 @@ input[type="search"]::-webkit-search-cancel-button {
     color: white;
     font-size: 2rem;
     cursor: pointer;
-}
-.createGroupBtn:hover {
-    background-color: white;
-    color: black;
-    font-weight: 600;
-    border: 0.3rem solid black;
 }
 #overlay2{
     background-color: rgba(0, 0, 0, 0.5);
