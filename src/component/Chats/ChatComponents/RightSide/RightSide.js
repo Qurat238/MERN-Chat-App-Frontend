@@ -11,7 +11,7 @@ import icon from "../../../../images/icon.png";
 import io from "socket.io-client";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LeftSideAppear } from '../LeftSide/LeftSide.js';
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://mern-chat-app-backend-three.vercel.app";
 var socket, selectedChatCompare;
 
 const RightSide = ({fetchAgain, setFetchAgain}) => {
