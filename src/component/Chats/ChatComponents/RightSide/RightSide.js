@@ -62,7 +62,7 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
     if(!selectedChat) return;
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/messages/${selectedChat._id}`);
+      const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/messages/${selectedChat._id}`);
       setMessages(data);
       setLoading(false);
       socket.emit("join chat", selectedChat._id);
@@ -87,7 +87,7 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
           },
         }
         const { data } = await axios.post(
-          "/api/v1/messages/",
+          "https://mern-chat-app-backend-three.vercel.app/api/v1/messages/",
           {
             content: newMessage,
             chatId: selectedChat._id,

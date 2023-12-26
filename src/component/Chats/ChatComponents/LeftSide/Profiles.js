@@ -16,7 +16,7 @@ const Profiles = ({fetchAgain}) => {
 
    const fetchChats = async() => {
       try {
-         const { data } = await axios.get(`api/v1/chats/`);
+         const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/chats/`);
          setChats(data);
       } catch (error) {
          Swal.fire({

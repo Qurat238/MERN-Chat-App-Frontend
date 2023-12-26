@@ -66,7 +66,7 @@ const Sidebar = () => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.get(`/api/v1/users?search=${search}`);
+            const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/users?search=${search}`);
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
@@ -86,7 +86,7 @@ const Sidebar = () => {
                     "Content-Type":"application/json"
                 },
             }
-            const { data } = await axios.post(`/api/v1/chats/`, { userId }, config);
+            const { data } = await axios.post(`https://mern-chat-app-backend-three.vercel.app/api/v1/chats/`, { userId }, config);
             if(!chats.find((e) => (e._id === data._id))){
                 setChats([data, ...chats]);        
             }

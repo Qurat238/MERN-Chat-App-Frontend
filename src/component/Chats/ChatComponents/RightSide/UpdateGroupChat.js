@@ -51,7 +51,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
         },
       }
       const { data } = await axios.put(
-        '/api/v1/chats/remove',
+        'https://mern-chat-app-backend-three.vercel.app/api/v1/chats/remove',
         {
           chatId: selectedChat._id,
           userId: userToRemove._id,
@@ -83,7 +83,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
         },
       }
       const { data } = await axios.put(
-        '/api/v1/chats/rename',
+        'https://mern-chat-app-backend-three.vercel.app/api/v1/chats/rename',
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -117,7 +117,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.get(`/api/v1/users?search=${groupChatSearch}`);
+            const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/users?search=${groupChatSearch}`);
             setLoading(false);
             let newUserSearchedResult = document.getElementById('newUserSearchedResult');
             newUserSearchedResult.style.display = 'block';
@@ -163,7 +163,7 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
         },
       }
       const { data } = await axios.put(
-        '/api/v1/chats/add',
+        'https://mern-chat-app-backend-three.vercel.app/api/v1/chats/add',
         {
           chatId: selectedChat._id,
           userId: userToAdd._id,

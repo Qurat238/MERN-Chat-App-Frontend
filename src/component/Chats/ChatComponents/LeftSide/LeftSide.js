@@ -52,7 +52,7 @@ const LeftSide = ({fetchAgain}) => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.get(`/api/v1/users?search=${groupChatSearch}`);
+            const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/users?search=${groupChatSearch}`);
             setLoading(false);
             let userSearchedResult = document.getElementById('userSearchedResult');
             userSearchedResult.style.display = 'block';
@@ -109,7 +109,7 @@ const LeftSide = ({fetchAgain}) => {
       },
     }
     const { data } = await axios.post(
-      "/api/v1/chats/group",
+      "https://mern-chat-app-backend-three.vercel.app/api/v1/chats/group",
       {
         name: groupChatName,
         users: JSON.stringify(groupChatSelectedUsers.map((u) => u._id)),
