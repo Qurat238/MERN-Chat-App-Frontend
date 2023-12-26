@@ -8,6 +8,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import axios from 'axios';
 import SearchedResultLoading from '../Sidebar/SearchedResultLoading';
 
+
 const LeftSide = ({fetchAgain}) => {
 
   const { chats, setChats } = ChatState();
@@ -33,6 +34,7 @@ const LeftSide = ({fetchAgain}) => {
         overlay2.style.display = 'none';
   }
 
+
   const searchedUsersHandler = (user) => {
     setGroupChatSelectedUsers([user, ...groupChatSelectedUsers]);
   }
@@ -43,7 +45,8 @@ const LeftSide = ({fetchAgain}) => {
             Swal.fire({
             text: 'Please enter something',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
             });
             return;
         }
@@ -58,7 +61,8 @@ const LeftSide = ({fetchAgain}) => {
             Swal.fire({
             text: 'Failed to load the search result',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         })
     }}
 
@@ -93,7 +97,8 @@ const LeftSide = ({fetchAgain}) => {
       Swal.fire({
         text: 'Please fill all the fields',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
     });
     return;
   }
@@ -119,19 +124,21 @@ const LeftSide = ({fetchAgain}) => {
     Swal.fire({
         text: 'New Group Chat Created Successfully',
         icon: 'success',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
     });
   } catch (error) {
     Swal.fire({
         text: 'Failed to create the Chat',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
     });
   }
 }
 
   return (
-    <div className='leftSide'>
+    <div className='leftSide' id='leftSide'>
       <div className='createGroup'>
           <button style={{cursor:"pointer"}} onClick={createGroupChatHandler}>Create New Group +</button>
           <div id='overlay2'>
@@ -184,3 +191,15 @@ const LeftSide = ({fetchAgain}) => {
 }
 
 export default LeftSide;
+
+export const LeftSideAppear = () => {
+  let leftSide = document.getElementById('leftSide');
+  leftSide.style.display='block';
+  leftSide.style.width='96vw';
+}
+
+export const LeftSideVanish = () => {
+  let leftSide = document.getElementById('leftSide');
+  leftSide.style.width='0';
+  leftSide.style.display='none';
+}

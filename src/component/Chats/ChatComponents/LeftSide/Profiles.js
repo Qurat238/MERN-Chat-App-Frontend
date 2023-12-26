@@ -6,6 +6,8 @@ import Swal from "sweetalert2";
 import axios from 'axios';
 import SearchedResultLoading from '../Sidebar/SearchedResultLoading.js';
 import { IconButton } from '@mui/material';
+import { LeftSideVanish }  from "../LeftSide/LeftSide.js";
+import { RightSideAppear } from "../RightSide/RightSide.js";
 
 const Profiles = ({fetchAgain}) => {
 
@@ -20,7 +22,8 @@ const Profiles = ({fetchAgain}) => {
          Swal.fire({
          text: 'Error fetching the chat',
          icon: 'error',
-         confirmButtonText: 'Ok'
+         confirmButtonText: 'Ok',
+         customClass: 'swal-wide'
       });
       }
    }
@@ -31,6 +34,13 @@ const Profiles = ({fetchAgain}) => {
 
    const getSenderImage = (loggedUser, users) => {
       return users[0]._id === loggedUser.user._id ? users[1].avatar.url : users[0].avatar.url;
+   }
+
+   const SmallScreenHandler = () => {
+         if(window.innerWidth < 441){
+            LeftSideVanish();
+            RightSideAppear();
+         }
    }
 
    useEffect(() => {
@@ -44,9 +54,9 @@ const Profiles = ({fetchAgain}) => {
       {chats ? (
          <div className='profilesSection'>
             {chats.map((chat) => (
-               <div className={selectedChat === chat ? 'profileSelected' : 'profile'} key={chat._id} onClick={() => setSelectedChat(chat)}>
+               <div className={selectedChat === chat ? 'profileSelected' : 'profile'} key={chat._id} onClick={() => {setSelectedChat(chat); SmallScreenHandler()}}>
                   {loggedUser && (
-                     <div>
+                     <div className='info'>
                         <div className='profilePic'>
                            <img style={{backgroundColor:"white"}} src={!chat.isGroupChat ? getSenderImage(loggedUser, chat.users) : `${icon}`}/>
                            {/* <div className={chat.isGroupChat ? "not" : "dot"}></div> */}

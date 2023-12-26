@@ -151,23 +151,9 @@
     z-index: 1;
     display: none;
 }
-
-@media (max-width:1650px) {
-    /* #sidePanel{
-        width: 30vw;
-    }
-    #sidePanel div input {
-        width: 26vw;
-    } */
+.swal2-popup {
+    font-size: 2.5rem !important;
 }
-/*@media (max-width:1093px) {
-    #sidePanel{
-        width: 31vw;
-    }
-    #sidePanel div input {
-        width: 27vw;
-    }
-} */
 @media (max-width:768px) {
     #sidePanel{
         width: 40vw;
@@ -183,10 +169,51 @@
 }
 @media (max-width:569px) {
     #profile{
-        top: 30%;
+        top: 35%;
         left: 20%;
         width: 55rem;
         height: 40rem;
+    }
+    #sidePanel div input {
+        font-size: 2.5rem;
+        border: 0.3rem solid black;
+    }
+    .sidebarContainer .search button svg{
+        font-size: 4rem;
+    }
+    .sidebarContainer .options button svg{
+        font-size: 4rem;
+    }
+}
+@media (max-width:440px) {
+    .sidebarContainer .search button svg{
+        font-size: 5rem;
+    }
+    .sidebarContainer .options button svg{
+        font-size: 5rem;
+    }
+}
+@media (max-width:410px) {
+    #profile{
+        left: 15%;
+    }
+}
+@media (max-width:368px) {
+    #profile{
+        height: 50rem;
+        width: 60rem;
+    }
+    #profile div h1{
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    #profile div p{
+        font-size: 3.5rem;
+    }
+    #profile div img{
+        width: 17rem;
+        height: 17rem;
+        margin-bottom: 2rem;
     }
 }
 @media (max-width:360px) {
@@ -211,30 +238,20 @@
     #sidePanel div button svg {
         font-size: 5rem;
     }
-    #profile{
-        height: 50rem;
-    }
-    #profile div h1{
-        font-size: 4rem;
-        margin-bottom: 2rem;
-    }
-    #profile div p{
-        font-size: 3.5rem;
-    }
-    #profile div img{
-        width: 17rem;
-        height: 17rem;
-        margin-bottom: 2rem;
-    }
 }
-@media (max-width:315px) {
-    #profile{
-        left: 15%;
-    }
-}
-@media (max-width:290px) {
+@media (max-width:335px) {
     #profile{
         left: 10%;
+    }
+}
+@media (max-width:300px) {
+    #profile{
+        left: 8%;
+    }
+}
+@media (max-width:285px) {
+    #profile{
+        left: 6%;
     }
 }
 @media (max-width:260px) {

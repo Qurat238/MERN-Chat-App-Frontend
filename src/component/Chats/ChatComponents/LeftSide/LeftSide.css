@@ -1,16 +1,16 @@
 .leftSide{
-    width: 24vw;
-    background-color: black;
+    width: 25vw;
+    background-color: white;
     border: 0.3rem solid white;
     height: 90vh;
-    margin-left: 1rem;
+    margin-left: 1vw;
     margin-top: 0.4rem;
     border-radius: 1rem;
-    overflow: hidden;
 }
 .createGroup{
     background-color: white;
     border-bottom: 3px solid white;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 .createGroup > button {
     margin: 1rem 2rem;
@@ -35,11 +35,11 @@
     background-color: #2A6A5A;
     z-index: 1;
     position: fixed;
-    top: 9rem;
-    left: 50rem;
-    width: 45rem;
+    top: 15%;
+    left: 35%;
+    width: 30%;
     height: auto;
-    min-height: 45rem;
+    min-height: 70%;
     display: none;
     transition: all 0.5s;
     padding-bottom: 5rem;
@@ -51,7 +51,7 @@
 }
 #createGroupChat > div > h1{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
@@ -68,7 +68,7 @@
     padding: 1rem;
     padding-left: 2rem;
     font-size: 2rem;
-    width: 20vw;
+    width: 22vw;
     border: 0.3rem solid black;
     border-radius: 5rem;
 }
@@ -76,7 +76,7 @@
     padding: 1rem;
     padding-left: 2rem;
     font-size: 2rem;
-    width: 20vw;
+    width: 22vw;
     border-radius: 5rem;
     border: 0.3rem solid black;
 }
@@ -105,7 +105,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 12vh;
     display: none;
     margin-top: -2rem;
-    margin-left: 2.2rem;
+    margin-left: 1.5rem;
     width: 18vw;
     background-color: white;
     margin-bottom: 2rem;
@@ -164,7 +164,7 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: white;
 }
 .userSelectedResult::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #2A6A5A;
 }
 .userSelectedResult::-webkit-scrollbar-thumb {
     background-color: black;
@@ -187,11 +187,11 @@ input[type="search"]::-webkit-search-cancel-button {
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.userSelectedResult div p button svg{
+.userSelectedResult div p svg{
     margin-left: 1rem;
 }
 .createGroupBtn{
-    width: 7vw;
+    width: 9vw;
     height: 5rem;
     margin-top: 1rem;
     margin-left: 30%;
@@ -211,3 +211,326 @@ input[type="search"]::-webkit-search-cancel-button {
     z-index: 1;
     display: none;
 }
+.swal2-popup {
+    font-size: 2.5rem !important;
+}
+@media (max-width:1115px) {
+    .leftSide{
+        width: 30vw;
+    }
+    #createGroupChat{
+        width: 40%;
+        left: 30%;
+    }
+    .groupName input{
+        width: 29vw;
+    }
+    .userSearchSection input{
+        width: 29vw;
+    }
+    .userSelectedResult{
+        width: 27vw;
+    }
+    #userSearchedResult{
+        margin-left: 1.5rem;
+        width: 25vw;
+    }
+    .createGroupBtn{
+        width: 15vw;
+        margin-left: 20%;
+    }
+}
+@media (max-width:998px) {
+    #createGroupChat{
+        min-height: 65%;
+    }
+}
+@media (max-width:850px) {
+    #createGroupChat {
+        width: 45%;
+        left: 28%;
+    }
+}
+@media (max-width:810px) {
+    .leftSide{
+        width: 37vw;
+    }
+}
+@media (max-width:768px) {
+    #createGroupChat {
+        min-height: 55%;
+        top: 25%;
+    }
+}
+@media (max-width:720px) {
+    .userSearchSection input,
+    .groupName input{
+        width: 33vw;
+    }
+    #userSearchedResult{
+        width: 29vw;
+        margin-left: 1.4rem;
+    }
+    .userSelectedResult{
+        width: 31vw;
+    }
+    .createGroupBtn{
+        width: 16vw;
+    }
+}
+@media (max-width:630px) {
+    #createGroupChat {
+        width: 50%;
+        left: 25%;
+    }
+}
+@media (max-width:580px) {
+    .userSearchSection input,
+    .groupName input{
+        width: 36vw;
+    }
+    #userSearchedResult{
+        width: 32vw;
+        margin-left: 1.4rem;
+    }
+    .userSelectedResult{
+        width: 34vw;
+    }
+    .createGroupBtn{
+        width: 19vw;
+    }
+}
+@media (max-width:568px) {
+    .createGroup > button {
+        margin-top: 3rem;
+        padding: 1.5rem 1rem;
+        font-weight: 900;
+        font-size: 2.3rem;
+        border-radius: 13rem;
+    }
+    #closeChat svg {
+        font-size: 4rem;
+    }
+    #createGroupChat > div > h1{
+        font-size: 4rem;
+    }
+    #createGroupChat {
+        top: 25%;
+        left: 20%;
+        width: 60rem;
+        min-height: 60rem;
+    }
+    .groupName input{
+        margin-left: 1.5rem;
+    }
+    .userSearchSection input,
+    .groupName input{
+        width: 42vw;
+        padding: 1.8rem 2rem;
+        font-size: 2.5rem;
+        border: 0.5rem solid black;
+    }
+    .userSearchSection button {
+        margin-left: -6.5rem;
+        margin-top: 1rem;
+    }
+    .userSearchSection button svg {
+        font-size: 4rem;
+    }
+    #userSearchedResult{
+        width: 36vw;
+        margin-left: 1.5em;
+        border: 0.5rem solid black;
+        border-top: none;
+    }
+    #userSearchedResult::-webkit-scrollbar {
+        width: 1.2rem;
+    }
+    .userSearched img{
+        width: 6rem;
+        height: 6rem;
+        margin-right: 3rem;
+        margin-left: 1rem;
+    }
+    .userSearched .userSearchedInfo > h1{
+        margin-bottom: 0.1rem;
+        font-size: 2rem;
+    }
+    .userSearched .userSearchedInfo > p {
+        font-size: 1.8rem;
+    }
+    .userSelectedResult{
+        margin-top: 1rem;
+        width: 37vw;
+    }
+    .userSelectedResult::-webkit-scrollbar {
+        height: 1.5rem;
+    }
+    .userSelectedResult div p{
+        padding: 1.2rem;
+        padding-left: 2rem;
+        margin-right: 1rem;
+        border-radius: 6rem;
+        font-size: 2.2rem;
+    }
+    .userSelectedResult div p svg{
+        font-size: 2.5rem;
+    }
+    .createGroupBtn{
+        width: 22vw;
+        margin-left: 20%;
+        font-size: 2.5rem;
+        padding: 2rem 0;
+        height: 7rem;
+        margin-top: 3rem;
+    }
+}
+@media (max-width:500px) {
+    .userSearchSection input,
+    .groupName input{
+        width: 50vw;
+    }
+    #userSearchedResult{
+        width: 40vw;
+        margin-left: 4rem;
+    }
+    .userSelectedResult{
+        margin-top: 1rem;
+        width: 48vw;
+    }
+    .createGroupBtn{
+        margin-left: 30%;
+    }
+}
+@media (max-width:490px) {
+    .leftSide{
+        width: 43vw;
+    }
+}
+@media (max-width:478px) {
+    .createGroup > button {
+        width: 95%;
+        margin: 1rem;
+        margin-top: 3rem;
+    }
+}
+@media (max-width:440px) {
+    .leftSide{
+        margin-left: 2vw;
+        width: 96vw;
+    }
+    #createGroupChat {
+        top: 30%;
+        left: 15%;
+    }
+    .createGroup > button {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 3rem 1rem;
+        width: 85%;
+        margin-left: 7%;
+        font-weight: 900;
+        font-size: 3rem;
+        border-radius: 16rem;
+    }
+}
+@media (max-width:368px) {
+     #closeChat svg {
+        font-size: 5rem;
+    }
+    #createGroupChat > div > h1{
+        font-size: 4.5rem;
+    }
+    #createGroupChat {
+        left: 10%;
+        width: 70rem;
+        min-height: 70rem;
+    }
+    .userSearchSection input,
+    .groupName input{
+        width: 53vw;
+        padding: 2.3rem;
+        font-size: 3rem;
+    }
+    .userSearchSection button {
+        margin-left: -7rem;
+        margin-top: 1.2rem;
+    }
+    .userSearchSection button svg {
+        font-size: 5rem;
+    }
+    #userSearchedResult{
+        width: 45vw;
+        margin-left: 2rem;
+    }
+    #userSearchedResult::-webkit-scrollbar {
+        width: 1.5rem;
+    }
+    .userSearched img{
+        width: 9rem;
+        height: 9rem;
+        margin-left: none;
+        margin-right: 1rem;
+    }
+    .userSearched .userSearchedInfo > h1{
+        margin-bottom: 0.1rem;
+        font-size: 2.3rem;
+    }
+    .userSearched .userSearchedInfo > p {
+        font-size: 2.3rem;
+    }
+    .userSelectedResult{
+        margin-top: 1rem;
+        width: 48vw;
+    }
+    .userSelectedResult::-webkit-scrollbar {
+        height: 1.7rem;
+    }
+    .userSelectedResult div p{
+        font-size: 2.7rem;
+    }
+    .userSelectedResult div p svg{
+        font-size: 3rem;
+    }
+    .createGroupBtn{
+        width: 27vw;
+        font-size: 3rem;
+        height: 9rem;
+    }
+}
+@media (max-width:340px) {
+    #createGroupChat {
+        width: 80%;
+    }
+    .userSearchSection input,
+    .groupName input{
+        width: 60vw;
+        padding: 2.3rem;
+        font-size: 3rem;
+    }
+    #userSearchedResult{
+        width: 52vw;
+        margin-left: 3rem;
+    }
+    .userSelectedResult{
+        width: 57vw;
+    }
+}
+@media (max-width:300px) {
+    #createGroupChat {
+        width: 90%;
+        left: 5%;
+    }
+    .userSearchSection input,
+    .groupName input{
+        width: 65vw;
+    }
+    #userSearchedResult{
+        width: 55vw;
+        margin-left: 4rem;
+    }
+    .userSelectedResult{
+        width: 62vw;
+    }
+}
+

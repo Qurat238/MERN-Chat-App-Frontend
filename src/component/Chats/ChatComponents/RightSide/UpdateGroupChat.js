@@ -38,7 +38,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
     Swal.fire({
       text: 'Only Admin Can Remove Someone',
       icon: 'error',
-      confirmButtonText: 'Ok'
+      confirmButtonText: 'Ok',
+      customClass: 'swal-wide'
     });
     return;
     }
@@ -65,7 +66,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: error.response.data.message,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
       setLoading(false);
     }
@@ -95,7 +97,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: error.response.data.message,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
       setRenameLoading(false);
     }
@@ -107,7 +110,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
             Swal.fire({
             text: 'Please enter something',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
             });
             return;
         }
@@ -122,7 +126,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
             Swal.fire({
             text: 'Failed to load the search result',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         });
     }}
 
@@ -136,7 +141,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: 'User Already In Group',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
       return;
     }
@@ -144,7 +150,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: 'Only Admin Can Add Someone',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
     return;
     }
@@ -170,7 +177,8 @@ const UpdateGroupChat = ({fetchMessages, fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: error.response.data.message,
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
       setLoading(false);
     }

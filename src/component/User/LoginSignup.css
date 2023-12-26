@@ -14,7 +14,7 @@
 .LoginSignupBox{
     background-color: #559584;
     width: 27vw;
-    height: 80vh;
+    height: 85vh;
     box-sizing: border-box;
     overflow: hidden;
     border: 0.3rem solid white;
@@ -133,6 +133,9 @@
     transition: 0.5s linear;
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.219);
 }
+.loginBtn{
+    margin-top: 5rem;
+}
 .shiftToLeft{
     transform: translateX(-100%);
 }
@@ -144,6 +147,9 @@
 }
 .shiftToRight{
     transform: translateX(100%);
+}
+.swal2-popup {
+    font-size: 2.5rem !important;
 }
 
 @media (max-width:1650px) {
@@ -206,6 +212,9 @@
     }
 }
 @media (max-width: 568px) {
+    .LoginSignupBox{
+        width: 65vw;
+    }
     .login_signup_toggle{
         height: 8rem;
     }
@@ -218,10 +227,22 @@
     .loginForm div input,
     .signupForm div input{
         font-size: 2.5rem;
+        border: 0.5rem solid black;
+        padding: 2.5rem 4rem;
+        padding-left: 5rem;
     }
     .loginForm div svg,
     .signupForm div svg{
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+    #registerImage img{
+        width: 9rem;
+        height: 9rem;
+        border: 0.5rem solid black;
+    }
+    #registerImage input{
+        border: 0.5rem solid black;
+        padding: 2rem 0.5rem;
     }
     .loginForm a{
         font-size: 3rem;
@@ -232,13 +253,25 @@
         font-size: 3rem;
         margin-top: 3rem;
     }
-    .loginForm div input,
-    .signupForm div input{
-        padding: 2.5rem 4rem;
+}
+@media (max-width:480px) {
+    .LoginSignupBox{
+        width: 75vw;
     }
 }
 @media (max-width:440px) {
     .LoginSignupBox{
-        height: 50vh;
+        height: 60vh;
     }
 } 
+@media (max-width:368px) {
+    .LoginSignupBox{
+        height: 50vh;
+        width: 80vw;
+    }
+}
+@media (max-width:280px) {
+    .LoginSignupBox{
+        width: 90vw;
+    }
+}

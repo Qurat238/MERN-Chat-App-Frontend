@@ -9,5 +9,7 @@
 }
 .chatsSection{
     display: flex;
-    gap: 1rem;
+    gap: 1vw;
+    width: 100%;
+    overflow: hidden;
 }

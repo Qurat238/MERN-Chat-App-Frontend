@@ -16,6 +16,11 @@ html{
       font-size: 45% !important;
   }
 }
+@media (max-width:700px) {
+  .swal-wide{
+    width:70%;
+  }
+}
 @media (max-width:568px) {
   html{
       font-size: 35% !important;

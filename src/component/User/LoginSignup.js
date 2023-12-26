@@ -92,7 +92,8 @@ const LoginSignup = () => {
             Swal.fire({
                 text: "Registration Successful",
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             localStorage.setItem("Info", JSON.stringify(data));
             setLoading(false);
@@ -102,7 +103,8 @@ const LoginSignup = () => {
             Swal.fire({
                 text: error.response.data.message,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             setLoading(false);
         }
@@ -123,7 +125,8 @@ const LoginSignup = () => {
             Swal.fire({
                 text: "Login Successful",
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             localStorage.setItem("Info", JSON.stringify(data));
             setLoading(false);
@@ -133,7 +136,8 @@ const LoginSignup = () => {
             Swal.fire({
                 text: error.response.data.message,
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'Ok',
+                customClass: 'swal-wide'
             });
             setLoading(false);
         }
@@ -175,7 +179,7 @@ const LoginSignup = () => {
                                     onChange={(e) => setLoginPassword(e.target.value)}
                                 />
                             </div>
-                            <Link to="/password/forgot">Forget Password?</Link>
+                            {/* <Link to="/password/forgot">Forget Password?</Link> */}
                             <input type="submit" value="Login" className="loginBtn"/>
                         </form>
                         <form className="signupForm" ref={registerTab}  encType="multipart/form-data" onSubmit={registerSubmit}>

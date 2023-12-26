@@ -1,7 +1,7 @@
 .profilesSection{
-    background-color: white;
-    height: 81vh;
+    background-color: white;  
     overflow-y: scroll;
+    height: 78vh;
     overflow-x: hidden;
 }
 .profilesSection::-webkit-scrollbar{
@@ -41,9 +41,10 @@
     display: flex;
     align-items: center;
 }
-.profilePic{
+.info{
     display: flex;
-    position: relative;
+    flex-basis: 2 7;
+    gap: 2rem;
 }
 .profilePic img{
     width: 6rem;
@@ -59,23 +60,79 @@
     top: 0.5rem;
     left: 4.5rem;
 } */
-.profileInfo{
-    width: 30rem;
-    height: 5rem;
-    margin-left: 2rem;
-}
 .profileInfo h1{
     margin-bottom: 0.3rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #50897A;
+    font-size: 2rem;
 }
 .profileInfo div{
     display: flex;
     justify-content: space-between;
 }
-.profileInfo div p{
+/*.profileInfo div p{
     font-size: 1.6rem;
 }
-/* .tick{
+.tick{
     margin-right: 1rem;
 } */
+.swal2-popup {
+    font-size: 2.5rem !important;
+}
+
+@media (max-width:998px) {
+    .profilesSection{
+        height: 79.3vh;
+    }
+}
+@media (max-width:768px) {
+    .profilesSection{
+        height: 81vh;
+    }
+}
+@media (max-width:568px) {
+    .profilesSection{
+        height: 79vh;
+    }
+    .profilesSection::-webkit-scrollbar{
+        width: 1rem;
+    }
+    .profilesSection .profile{
+        padding: 2rem 1.5rem;
+    }
+    .profilesSection .profileSelected{
+        padding: 2rem 1.5rem;
+    }
+    .profilePic img{
+        width: 7rem;
+        height: 7rem;
+    }
+    .profileInfo h1{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:478px) {
+    .profilesSection{
+        height: 79vh;
+    }
+}
+@media (max-width:440px) {
+    .profilesSection{
+        height: 75vh;
+    }
+    .profilesSection::-webkit-scrollbar{
+        width: 1.5rem;
+    }
+    .info{
+        flex-basis: 3 6;
+        gap: 5rem;
+    }
+    .profilePic img{
+        width: 11rem;
+        height: 11rem;
+        margin-left: 6rem;
+    }
+    .profileInfo h1{
+        font-size: 3rem;
+    }
+}

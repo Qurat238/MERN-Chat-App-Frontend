@@ -12,11 +12,11 @@
     background-color: #2A6A5A;
     z-index: 1;
     position: fixed;
-    top: 10rem;
-    left: 50rem;
-    width: 45rem;
-    height: 65vh;
-    min-height: 45rem;
+    top: 15%;
+    left: 33%;
+    width: 35%;
+    height: auto;
+    min-height: 50%;
     display: none;
     transition: all 0.5s;
     padding-bottom: 5rem;
@@ -27,8 +27,7 @@
     align-items: center;
 }
 #editGroup > div > h1 {
-    width: 20vw;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 900;
@@ -37,7 +36,7 @@
 }
 .oldUsers {
     display: flex;
-    width: 20vw;
+    width: 70%;
     overflow-x: scroll;
     justify-content: flex-start;
     margin-bottom: 2rem;
@@ -70,12 +69,12 @@
     border-radius: 2rem;
     font-size: 1.5rem;
 }
-.oldUsers div p button svg {
+.oldUsers div p svg {
     margin-left: 1rem;
 }
 .renameGroup,
 .userEditSection{
-    width: 20vw;
+    width: 70%;
     display: flex;
     margin: 1rem auto;
 }
@@ -84,7 +83,7 @@
     padding: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
-    width: 20vw;
+    width: 100%;
     border: 0.3rem solid black;
 }
 .renameGroup button,
@@ -116,9 +115,9 @@
     overflow-y: scroll;
     height: 12vh;
     display: none;
-    width: 18vw;
+    width: 20vw;
     margin-top: -1rem;
-    margin-left: 1.5rem;
+    margin-left: 0;
     background-color: white;
     margin-bottom: 2rem;
     position: fixed;
@@ -165,7 +164,7 @@
     font-size: 1.3rem;
 }
 .leaveGroupBtn{
-    width: 7vw;
+    width: 30%;
     margin-top: 3rem;
     padding: 1rem 0;
     background-color: black;
@@ -183,3 +182,205 @@
     z-index: 1;
     display: none;
 }
+.swal2-popup {
+    font-size: 2.5rem !important;
+}
+
+@media (max-width:1115px) {
+    #editGroup{
+        width: 40%;
+        left: 30%;
+    }
+    #newUserSearchedResult {
+        width: 25vw;
+        margin-left: -3rem;
+    }
+}
+@media (max-width:890px) {
+    #editGroup{
+        width: 50%;
+        left: 25%;
+        top: 20%;
+    }
+    #newUserSearchedResult {
+        width: 30vw;
+        margin-left: -5rem;
+    }
+}
+@media (max-width:768px) {
+    #editGroup{
+        top: 23%;
+        height: 60%;
+    }
+    #editGroup > div > h1 {
+        margin-bottom: 2.5rem;
+    }
+    .userEditSection button{
+        margin-top: 0.3rem;
+    }
+}
+@media (max-width:690px) {
+    #editGroup{
+        width: 55%;
+        left: 22%;
+    }
+}
+@media (max-width:568px) {
+    .groupSetting > button svg{
+        font-size: 4rem;
+    }
+    #editGroup{
+        width: 60%;
+        left:20%;
+    }
+    #editGroup > div > h1 {
+        font-size: 4.5rem;
+        margin-bottom: 2.5rem;
+        margin-top: 5rem;
+    }
+    .oldUsers div p {
+        padding: 1.3rem;
+        font-size: 2.1rem;
+        border-radius: 5rem;
+    }
+    .oldUsers::-webkit-scrollbar {
+        height: 1.5rem;
+    }
+    .oldUsers div p svg {
+        font-size: 2.4rem;
+    }
+    .renameGroup input,
+    .userEditSection input {
+        padding: 1.3rem;
+        font-size: 2.5rem;
+        border: 0.5rem solid black;
+    }
+    .userEditSection button{
+        margin-top: 0.5rem;
+    }
+    #newUserSearchedResult {
+        width: 35vw;
+        margin-left: -8rem;
+        border: 0.5rem solid black;
+        border-top: none;
+    }
+    #newUserSearchedResult::-webkit-scrollbar {
+        width: 1.3rem;
+    }
+    .newUserSearched img {
+        width: 6rem;
+        height: 6rem;
+        margin-right: 3rem;
+        margin-left: 2rem;
+    }
+    .newUserSearched .newUserSearchedInfo>h1 {
+        font-size: 2rem;
+    }
+    .newUserSearched .newUserSearchedInfo>p {
+        font-size: 1.8rem;
+    }
+    .leaveGroupBtn{
+        width: 40%;
+        font-size: 3rem;
+    }
+}
+@media (max-width:520px) {
+    #editGroup{
+        width: 65%;
+        left:18%;
+    }
+    #newUserSearchedResult {
+        width: 40vw;
+        margin-left: -9.5rem;
+    }
+}
+@media (max-width:440px) {
+    .groupSetting > button svg{
+        font-size: 5rem;
+    }
+    #editGroup{
+        width: 80%;
+        left:10%;
+    }
+    #editGroup > div > h1 {
+        font-size: 5rem;
+    }
+    .oldUsers div p {
+        padding: 1.5rem;
+        font-size: 2.6rem;
+        border-radius: 6rem;
+    }
+    .oldUsers div p svg {
+        font-size: 2.9rem;
+    }
+    .renameGroup input,
+    .userEditSection input {
+        padding: 1.5rem;
+        padding-left: 2rem;
+        font-size: 3rem;
+    }
+    .renameGroup button{
+        margin-left: -7rem;
+    }
+    .userEditSection button{
+        margin-left: -7rem;
+        margin-top: 0.8rem;
+    }
+    .renameGroup button svg{
+        font-size: 3.5rem;
+    }
+    .userEditSection button svg {
+        font-size: 4.5rem;
+    }
+    #newUserSearchedResult {
+        width: 50vw;
+        margin-left: -14rem;
+    }
+    #newUserSearchedResult::-webkit-scrollbar {
+        width: 1.5rem;
+    }
+    .newUserSearched img {
+        width: 8rem;
+        height: 8rem;
+    }
+    .newUserSearched .newUserSearchedInfo>h1 {
+        font-size: 2.5rem;
+    }
+    .newUserSearched .newUserSearchedInfo>p {
+        font-size: 2.3rem;
+    }
+    .leaveGroupBtn{
+        width: 40%;
+        font-size: 3.5rem;
+    }
+}
+@media (max-width:400px) {
+    #newUserSearchedResult {
+        margin-left: -12.5rem;
+    }
+}
+@media (max-width:368px) {
+    #editGroup{
+        height: 55%;
+        top: 25%;
+    }
+    #editGroup > div > h1 {
+        margin-top: 8rem;
+    }
+    #newUserSearchedResult {
+        width: 47vw;
+        margin-left: -12.5rem;
+    }
+}
+@media (max-width:330px) {
+    #newUserSearchedResult {
+        width: 50vw;
+        margin-left: -12.5rem;
+    }
+}
+@media (max-width:290px) {
+    #newUserSearchedResult {
+        width: 55vw;
+    }
+}
+

@@ -42,7 +42,8 @@ const Sidebar = () => {
         Swal.fire({
             text: 'Logged Out Successfully',
             icon: 'success',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         });
     }
 
@@ -58,7 +59,8 @@ const Sidebar = () => {
             Swal.fire({
             text: 'Please enter something',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
             });
             return;
         }
@@ -71,7 +73,8 @@ const Sidebar = () => {
             Swal.fire({
             text: 'Failed to load the search result',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
         })
     }}
     
@@ -103,7 +106,8 @@ const Sidebar = () => {
             Swal.fire({
             text: 'Error fetching the chat',
             icon: 'error',
-            confirmButtonText: 'Ok'
+            confirmButtonText: 'Ok',
+            customClass: 'swal-wide'
             })
         }
     }

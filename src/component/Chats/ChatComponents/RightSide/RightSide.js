@@ -9,6 +9,8 @@ import axios from 'axios';
 import Swal from "sweetalert2";
 import icon from "../../../../images/icon.png";
 import io from "socket.io-client";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { LeftSideAppear } from '../LeftSide/LeftSide.js';
 const ENDPOINT = "http://localhost:4000";
 var socket, selectedChatCompare;
 
@@ -20,6 +22,7 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
   const [ socketConnected, setSocketConnected ] = useState(false);
   // const [ typing, setTyping ] = useState(false);
   // const [ isTyping, setIsTyping ] = useState(false);
+
 
   const { user, selectedChat, setSelectedChat, notifications, setNotifications } = ChatState();
 
@@ -60,7 +63,6 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
     try {
       setLoading(true);
       const { data } = await axios.get(`/api/v1/messages/${selectedChat._id}`);
-      console.log(data)
       setMessages(data);
       setLoading(false);
       socket.emit("join chat", selectedChat._id);
@@ -68,7 +70,8 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
       Swal.fire({
         text: 'Failed to load the Messages',
         icon: 'error',
-        confirmButtonText: 'Ok'
+        confirmButtonText: 'Ok',
+        customClass: 'swal-wide'
       });
     }
   }
@@ -99,11 +102,19 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
         Swal.fire({
           text: 'Failed to send the Message',
           icon: 'error',
-          confirmButtonText: 'Ok'
+          confirmButtonText: 'Ok',
+          customClass: 'swal-wide'
         });
       }
     }
       
+  }
+
+  const arrowHandler = (e) => {
+    let rightSide = document.getElementById('rightSide');
+    rightSide.style.width="0";
+    rightSide.style.display='none';
+    LeftSideAppear();
   }
 
   useEffect(() => {
@@ -143,15 +154,15 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
 
   useEffect(() => {
     socket.on("message received", (newMessage) => {
-      if(!selectedChatCompare || selectedChatCompare._id !== newMessage.chat._id){
+      // if(!selectedChatCompare || selectedChatCompare._id !== newMessage.chat._id){
         // Give notifications
         // if(!notifications.includes(newMessage)){
         //   setNotifications([newMessage, ...notifications]);
         //   setFetchAgain(!fetchAgain);
         // }
-      } else {
+      // } else {
         setMessages([...messages, newMessage]);
-      }
+      // }
     });
   },[messages]);
 
@@ -166,9 +177,9 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
     <div>
     {selectedChat ? (
       <div>
-      <div className='rightSide'>
+      <div className='rightSide' id='rightSide'>
       <div className='userName'>
-        {/* <ArrowBackIcon onClick={() => setSelectedChat("")}/> */}
+        <ArrowBackIcon id='arrow' onClick={arrowHandler}/>
           {!selectedChat.isGroupChat ? (
             <div className='chatHeader'>
               <div className='chatHeaderBox'>
@@ -240,18 +251,37 @@ const RightSide = ({fetchAgain, setFetchAgain}) => {
       </div>
       <form className='write'>
         {/* <input id='messageInput' onChange={typingHandler} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{fontSize:"2rem", paddingLeft:"1rem"}}/> */}
-        <input id='messageInput' onChange={(e) => setNewMessage(e.target.value)} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{fontSize:"2rem", paddingLeft:"1rem"}}/>
+        <input id='messageInput' onChange={(e) => setNewMessage(e.target.value)} required={true} value={newMessage} placeholder='Type a Message...' type='text' style={{paddingLeft:"1rem"}}/>
         <button onClick={sendMessage}></button>
       </form>
     </div>
     </div>
     ) : (
       <div className='noSelectedChatTextContainer'>
-        <p>Click on a User to start Chatting</p>
+        <p>Click User, Start Chatting</p>
       </div>
     )}
     </div>
   )
 }
 
-export default RightSide
+export default RightSide;
+
+
+export const RightSideAppear = () => {
+  const applyStyles = () => {
+    let rightSide = document.getElementById('rightSide');
+    if (rightSide) {
+      rightSide.style.display = 'block';
+      rightSide.style.width = '96vw';
+      rightSide.style.marginLeft = '2vw';
+      rightSide.style.marginRight = '2vw';
+    }
+  };
+  setTimeout(applyStyles, 100);
+
+  return null;
+};
+
+
+
