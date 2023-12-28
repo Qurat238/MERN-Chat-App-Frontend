@@ -66,7 +66,7 @@ const Sidebar = () => {
         }
         try {
             setLoading(true);
-            const { data } = await axios.get(`https://mern-chat-app-backend-three.vercel.app/api/v1/users?search=${search}`);
+            const { data } = await axios.get(`/api/v1/users?search=${search}`);
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
