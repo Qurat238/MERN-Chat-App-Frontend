@@ -69,6 +69,7 @@ const Sidebar = () => {
             const { data } = await axios.get(`/api/v1/users?search=${search}`);
             setLoading(false);
             setSearchResult(data);
+            console.log(searchResult)
         } catch (error) {
             Swal.fire({
             text: 'Failed to load the search result',
