@@ -121,7 +121,7 @@ const LoginSignup = () => {
         };
             let email = loginEmail;
             let password = loginPassword;
-            const { data } = await axios.post(`/api/v1/users/login`, { email, password }, config);
+            const { data } = await axios.post(`https://mern-chat-app-backend-three.vercel.app/api/v1/users/login`, { email, password }, config);
             Swal.fire({
                 text: "Login Successful",
                 icon: 'success',
